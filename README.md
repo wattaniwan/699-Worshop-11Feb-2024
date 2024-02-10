@@ -34,14 +34,14 @@ District_of_onset
 - [Optional] Command for rename table
 
 ```
-ALTER TABLE demo_covid19_xxx.data_covid19 RENAME TO data_covid19_raw;
+ALTER TABLE data_covid19_xxx.data_covid19 RENAME TO data_covid19_raw;
 ```
 
 ### Create New Columns and Transform Date and Age in Years 
 - Create new columns
 
 ```
-ALTER TABLE demo_covid19_xxx.data_covid19_raw
+ALTER TABLE data_covid19_xxx.data_covid19_raw
 ADD COLUMN IF NOT EXISTS ANNOUCE_DATE DATE,
 ADD COLUMN IF NOT EXISTS NOTIFICATION_DATE DATE,
 ADD COLUMN IF NOT EXISTS AGE_YEAR FLOAT64;
@@ -50,40 +50,40 @@ ADD COLUMN IF NOT EXISTS AGE_YEAR FLOAT64;
 - Transform Date
 
 ```
-UPDATE demo_covid19_xxx.data_covid19_raw
+UPDATE data_covid19_xxx.data_covid19_raw
    SET ANNOUCE_DATE = PARSE_DATE('%d/%m/%Y', Announce_DateStr)
    WHERE Announce_DateStr  IS NOT NULL;
 
 ```
 
 ```
-UPDATE demo_covid19_xxx.data_covid19_raw
+UPDATE data_covid19_xxx.data_covid19_raw
    SET NOTIFICATION_DATE = PARSE_DATE('%d/%m/%Y', Notify_DateStr)
    WHERE Notify_DateStr  IS NOT NULL;
 ```
 
 - Transform Age in Years 
 
-Exploration:
+$\ \ \ \ \ \ $   Exploration:
 
 ```
 SELECT DISTINCT AgeStr
-FROM demo_covid19_xxx.data_covid19_raw;
+FROM data_covid19_xxx.data_covid19_raw;
 ```
 
 ```
 SELECT DISTINCT Unit
-FROM demo_covid19_xxx.data_covid19_raw;
+FROM data_covid19_xxx.data_covid19_raw;
 ```
 
-Transformation:
+$\ \ \ \ \ \ $   Transformation:
 
 ```
-UPDATE demo_covid19_xxx.data_covid19_raw
+UPDATE data_covid19_xxx.data_covid19_raw
 SET AGE_YEAR = AGE_YEAR/12
 WHERE Unit = "เดือน";
 
-UPDATE demo_covid19_xxx.data_covid19_raw
+UPDATE data_covid19_xxx.data_covid19_raw
 SET AGE_YEAR = AGE_YEAR/365
 WHERE Unit = "วัน";
 ```
