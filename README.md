@@ -64,7 +64,7 @@ UPDATE demo_covid19_xxx.data_covid19_raw
 
 - Transform Age in Years 
 
-$\ \ \ \ \ \ $   Exploration:
+Exploration:
 
 ```
 SELECT DISTINCT AgeStr
@@ -76,7 +76,7 @@ SELECT DISTINCT Unit
 FROM demo_covid19_xxx.data_covid19_raw;
 ```
 
-$\ \ \ \ \ \ $   Transformation:
+Transformation:
 
 ```
 UPDATE demo_covid19_xxx.data_covid19_raw
