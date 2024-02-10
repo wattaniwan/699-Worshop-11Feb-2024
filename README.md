@@ -64,7 +64,7 @@ UPDATE data_covid19_xxx.data_covid19_raw
 
 - Transform Age in Years 
 
-      Exploration:
+Exploration:
 
 ```
 SELECT DISTINCT AgeStr
@@ -76,7 +76,7 @@ SELECT DISTINCT Unit
 FROM data_covid19_xxx.data_covid19_raw;
 ```
 
-      Transformation:
+Transformation:
 
 ```
 UPDATE data_covid19_xxx.data_covid19_raw
@@ -151,7 +151,8 @@ SET Sex = 'ชาย',
 WHERE ID = 3951623;
 ```
 
-      View Result:
+View Result:
+
 ```
 SELECT ID, Sex, Province_of_isolation
 FROM data_covid19_xxx.data_covid19_raw
