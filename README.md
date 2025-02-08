@@ -20,6 +20,8 @@ Province_of_onset,
 District_of_onset
 ```
 
+or
+
 ```
 [
   {
