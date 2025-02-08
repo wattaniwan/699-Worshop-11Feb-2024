@@ -211,7 +211,7 @@ SELECT ID, Sex, Province_of_isolation
 FROM data_covid19_xxx.data_covid19_raw
 WHERE ID = 3951623;
 ```
-### 8. Delete in table **data_covid19_raw** 
+### 8. Delete data in table **data_covid19_raw** 
 
 - Delete data of ID 3951622:
 
