@@ -20,6 +20,57 @@ Province_of_onset,
 District_of_onset
 ```
 
+```
+[
+  {
+    "name": "ID",
+    "type": "INTEGER"
+  },
+  {
+    "name": "Announce_DateStr",
+    "type": "STRING"
+  },
+  {
+    "name": "Notify_DateStr",
+    "type": "STRING"
+  },
+  {
+    "name": "Sex",
+    "type": "STRING"
+  },
+  {
+    "name": "AgeStr",
+    "type": "STRING"
+  },
+  {
+    "name": "Unit",
+    "type": "STRING"
+  },
+  {
+    "name": "Nationality",
+    "type": "STRING"
+  },
+  {
+    "name": "Province_of_isolation",
+    "type": "STRING"
+  },
+  {
+    "name": "Risk",
+    "type": "STRING"
+  },
+  {
+    "name": "Province_of_onset",
+    "type": "STRING"
+  },
+  {
+    "name": "District_of_onset",
+    "type": "STRING"
+  }
+]
+
+```
+
+
 
 - Set **Header rows to skip = 1**
 
